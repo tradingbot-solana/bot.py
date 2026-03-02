@@ -1,8 +1,8 @@
-driftpy>=0.8.0
+driftpy==0.8.89  # or latest stable from PyPI
 pandas
 requests
 python-dotenv
 solana
 anchorpy
 asyncio
-solders  # <-- Add this line
+solders
