@@ -5,3 +5,4 @@ python-dotenv
 solana
 anchorpy
 asyncio
+solders  # <-- Add this line
