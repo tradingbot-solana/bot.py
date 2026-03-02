@@ -17,7 +17,10 @@ from driftpy.types import PositionDirection
 load_dotenv()
 
 # Config from env vars
-PRIVATE_KEY_JSON = json.loads(os.getenv("PRIVATE_KEY_JSON"))
+private_key_str = os.getenv("PRIVATE_KEY_JSON")
+if private_key_str is None:
+    raise ValueError("PRIVATE_KEY_JSON env var is not set! Check Railway Variables tab.")
+PRIVATE_KEY_JSON = json.loads(private_key_str)
 RPC_URL = os.getenv("RPC_URL")
 BIRDEYE_API_KEY = os.getenv("BIRDEYE_API_KEY")
 MARKET_INDEX = int(os.getenv("MARKET_INDEX", 0))  # SOL-PERP
